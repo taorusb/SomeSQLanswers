@@ -1,0 +1,3 @@
+select distinct email
+from person x
+where (select count(email) from person m where x.email = m.email) >= 2

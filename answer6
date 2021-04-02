@@ -1,0 +1,3 @@
+select distinct class
+from courses x
+where (select count(class) from courses m where x.class = m.class) >= 5
